@@ -154,16 +154,51 @@ possível o static_cast para reaproveitamento de código - mas não é possível
 
 //// Fazer a sobrecarga para todas as classes dos operadores =, ==, ≠ e << (friend)
 
+const Human &Human::operator=(const Human &other_human) {
+    if (this != &other_human) {
+        // forma não permitida pela classe abstrata
+        //*static_cast< Entity * >( this ) = static_cast< Entity >( other_human );
+        Entity::operator=(other_human);
+        if (other_human.equipped.steel_sword == 0) equipped.steel_sword = 0;
+        else equipped.steel_sword = new Sword(*other_human.equipped.steel_sword);
+
+        ...
+        
+    }
+    return *this;
+}
+
+
+const Entity &Entity::operator=(const Entity &assigned_entity) {
+    if (this != &assigned_entity) {
+        this->name = assigned_entity.name;
+        this->age = assigned_entity.age;
+
+        ...
+
+        // primeiro limpa o vetor para preenche-lo
+        for (auto sword : this->inventory.swords) {
+            delete sword;
+        }
+        ...
+    }
+
+    return *this; // permite a forma a = b = c
+}
+
      /// Operator=
         /// Base 1
+             //Base
 
              //Derivadas da Base 1 - mostrar uso static_cast
 
         /// Base 2
+             //Base
 
              //Derivadas da Base 2 - mostrar uso static_cast
 
         /// Base 3
+             //Base
 
              //Derivadas da Base 3 - mostrar uso static_cast
 
@@ -205,70 +240,3 @@ possível o static_cast para reaproveitamento de código - mas não é possível
     //Link vídeo mostrando a execução do código usando o arquivo de configuração
 
 
-    const Human &Human::operator=(const Human &other_human) {
-    if (this != &other_human) {
-        // forma não permitida pela classe abstrata
-        //*static_cast< Entity * >( this ) = static_cast< Entity >( other_human );
-        // forma sugerida pela IA
-        Entity::operator=(other_human);
-        if (other_human.equipped.steel_sword == 0) equipped.steel_sword = 0;
-        else equipped.steel_sword = new Sword(*other_human.equipped.steel_sword);
-
-        if (other_human.equipped.armor == 0) equipped.armor = 0;
-        else equipped.armor = new Armor(*other_human.equipped.armor);
-    }
-    return *this;
-}
-
-
-const Entity &Entity::operator=(const Entity &assigned_entity) {
-    if (this != &assigned_entity) {
-        this->name = assigned_entity.name;
-        this->age = assigned_entity.age;
-        this->coins = assigned_entity.coins;
-
-        this->max_health = assigned_entity.max_health;
-        this->health = assigned_entity.health;
-        this->max_stamina = assigned_entity.max_stamina;
-        this->stamina = assigned_entity.stamina;
-
-        this->category = assigned_entity.category;
-        this->level = assigned_entity.level;
-        this->next_level_xp = assigned_entity.next_level_xp;
-        this->xp = assigned_entity.xp;
-
-        this->is_stunned = assigned_entity.is_stunned;
-
-        this->physical_weakness = assigned_entity.physical_weakness;
-        this->fire_weakness = assigned_entity.fire_weakness;
-        this->poison_weakness = assigned_entity.poison_weakness;
-        this->ice_weakness = assigned_entity.ice_weakness;
-        this->silver_weakness = assigned_entity.silver_weakness;
-
-        this->total_physical_resistance = assigned_entity.total_physical_resistance;
-        this->total_fire_resistance = assigned_entity.total_fire_resistance;
-        this->total_poison_resistance = assigned_entity.total_poison_resistance;
-        this->total_ice_resistance = assigned_entity.total_ice_resistance;
-        this->total_silver_resistance = assigned_entity.total_silver_resistance;
-
-        // primeiro limpa o vetor para preenche-lo
-        for (auto sword : this->inventory.swords) {
-            delete sword;
-        }
-        this->inventory.swords.clear();
-        for (auto sword : assigned_entity.inventory.swords) {
-            Sword * new_sword = new Sword(*sword);
-            this->inventory.swords.push_back(new_sword);
-        }
-        for (auto armor : this->inventory.armors) {
-            delete armor;
-        }
-        this->inventory.armors.clear();
-        for (auto armor : assigned_entity.inventory.armors) {
-            Armor * new_armor = new Armor(*armor);
-            this->inventory.armors.push_back(new_armor);
-        }
-    }
-
-    return *this; // permite a forma a = b = c
-}
