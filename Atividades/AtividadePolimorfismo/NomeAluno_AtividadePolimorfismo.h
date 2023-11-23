@@ -118,27 +118,32 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
  /// Mostrar reaproveitamente de código da base
 
     /// Hierarquia 1
+         //Base - métodos virtuais puros
 
-         //Classe 1
+         //Classe concrete 1
 
-         //Classe 2
+         //Classe concrete 2
 
          //E assim por diante
 
     /// Hierarquia 2
 
-         //Classe 1
+         //Base - métodos virtuais puros
 
-         //Classe 2
+         //Classe concrete 1
+
+         //Classe concrete 2
 
          //E assim por diante
 
 
     /// Hierarquia 3
 
-         //Classe 1
+         //Base - métodos virtuais puros
 
-         //Classe 2
+         //Classe concrete 1
+
+         //Classe concrete 2
 
          //E assim por diante
 
