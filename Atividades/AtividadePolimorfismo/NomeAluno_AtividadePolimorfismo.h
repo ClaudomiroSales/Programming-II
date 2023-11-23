@@ -1,24 +1,38 @@
-/*Expandir a hierarquia da atividade anterior: três hierarquias de três níveis.
-Sendo que em uma das hierarquias há dois níveis de classes 
-abstratas. Uma das classes abstratas precisa ter pelo menos dois métodos virtuais 
-puros. Para cada lado da hierarquia criar ao menos duas classes concretas. 
-E pelo menos duas classes concretas herdando de uma dessas outras classes concretas. 
-Cada classe, além dos métodos herdados, precisa ter pelo menos um método que tenha 
-alguma funcionalidade, que não seja set e get. Para cada classe do seu 
- projeto criar pelo menos três constructores, sendo um o constructor de cópia. Em uma 
- das hierarquias deve haver alocação de memória usando um vector< ptr * >, onde ptr é 
- um ponteiro de uma de
-suas classes criadas que tem relação de composição. Ter um atributo static e um 
-atributo const static.  Fazer a sobrecarga para cada classe 
-dos operadores =, ==, ≠, ! e << (friend) para as classes concretas. Usar sempre que 
-possível o static_cast para reaproveitamento de código - mas não é possível usar
- para classes abstract.  Criar um vector de ponteiros de uma das classes abstrata e 
- armazenar nele objtetos de classes concretas. Usar dynamic_cast e typeid para fazer 
- algo significativo com partes dessas classes concretas. Carregamento e salvamento de 
- arquivos: é necessário ter a funcionalidade de 1. leitura de arquivos para 
- configuração das suas classes e variáveis de status, 2. processamento das variáveis 
- de status e 3. salvamento dessas variáveis. Todos os projetos devem ter um diagrama 
- mostrando a hierarquia. Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
+/*
+Expandir a hierarquia da atividade anterior: três hierarquias de três níveis.
+    Sendo que em uma das hierarquias há dois níveis de classes 
+    abstratas. Uma das classes abstratas precisa ter pelo menos dois métodos virtuais 
+    puros. 
+    
+    Para cada lado da hierarquia criar ao menos duas classes concretas. 
+        Pelo menos duas classes concretas herdando de uma dessas outras classes 
+        concretas. 
+        Cada classe, além dos métodos herdados, precisa ter pelo menos um método que tenha 
+        alguma funcionalidade, que não seja set e get. 
+
+Para cada classe do seu projeto criar pelo menos três constructores, sendo um o 
+constructor de cópia. 
+ 
+Em uma das hierarquias deve haver alocação de memória usando um vector< ptr * >, 
+onde ptr é  um ponteiro de uma de suas classes criadas que tem relação de composição. 
+ 
+Ter um atributo static e um atributo const static.  
+
+Fazer a sobrecarga para cada classe dos operadores =, ==, ≠, ! e << (friend) para as 
+classes concretas. Usar sempre que possível o static_cast para reaproveitamento de código - mas não é possível usar
+para classes abstract.  
+ 
+Criar um vector de ponteiros de uma das classes abstrata e  armazenar nele objetos 
+de classes concretas. Usar dynamic_cast e typeid para fazer algo significativo com 
+partes dessas classes concretas. 
+ 
+Carregamento e salvamento de  arquivos: é necessário ter a funcionalidade de 
+ 1. leitura de arquivos para  configuração das suas classes e variáveis de status, 
+ 2. processamento das variáveis de status e 
+ 3. salvamento dessas variáveis. 
+ 
+Todos os projetos devem ter um diagrama mostrando a hierarquia. 
+Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
 
 
 //// Geral - parte para revisão
@@ -205,25 +219,30 @@ const Entity &Entity::operator=(const Entity &assigned_entity) {
 
      //// Operators== e !=
          // Base 1
+             //Base
 
-             ////Derivadas da Base 1 - mostrar uso static_cast
+             //Derivadas da Base 1 - mostrar uso static_cast
 
          //// Base 2
+             //Base
 
-             ////Derivadas da Base 2 - mostrar uso static_cast
+             //Derivadas da Base 2 - mostrar uso static_cast
 
         //// Base 3
+             //Base
 
-             ////Derivadas da Base 3 - mostrar uso static_cast
+             //Derivadas da Base 3 - mostrar uso static_cast
 
      //// Operator<<
         //// Base 1
+            //Base
 
-            ////Derivadas da Base 1 - mostrar uso static_cast
+            //Derivadas da Base 1 - mostrar uso static_cast
 
         //// Base 2
+            //Base
 
-            ////Derivadas da Base 2 - mostrar uso static_cast
+            //Derivadas da Base 2 - mostrar uso static_cast
 
        //// Base 3
 
