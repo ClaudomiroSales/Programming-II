@@ -161,9 +161,9 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
     /// Mostrar método em que ele é usado efetivamente
     //preenchimento, set e get serão ignorados
 
-    ///Mostrar destructor
+    ///Mostrar destructor e desalocação
 
-    /// Mostrar p uso (indireto) deste vector
+    /// Mostrar o uso (indireto) deste vector
 
 
 //// Ter um atributo static e um atributo const static.
@@ -176,21 +176,6 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
 
 
 //// Fazer a sobrecarga para todas as classes dos operadores =, ==, ≠ e << (friend)
-
-//Class concrete
-const Human &Human::operator=(const Human &other_human) {
-    if (this != &other_human) {
-        // forma não permitida pela classe abstrata
-        //*static_cast< Entity * >( this ) = static_cast< Entity >( other_human );
-        Entity::operator=(other_human);
-        if (other_human.equipped.steel_sword == 0) equipped.steel_sword = 0;
-        else equipped.steel_sword = new Sword(*other_human.equipped.steel_sword);
-
-        ...
-        
-    }
-    return *this;
-}
 
 //Base abstract
 const Entity &Entity::operator=(const Entity &assigned_entity) {
@@ -210,59 +195,124 @@ const Entity &Entity::operator=(const Entity &assigned_entity) {
     return *this; // permite a forma a = b = c
 }
 
+
+//Class concrete
+const Human &Human::operator=(const Human &other_human) {
+    if (this != &other_human) {
+        // forma não permitida pela classe abstrata
+        //*static_cast< Entity * >( this ) = static_cast< Entity >( other_human );
+        Entity::operator=(other_human);
+        if (other_human.equipped.steel_sword == 0) equipped.steel_sword = 0;
+        else equipped.steel_sword = new Sword(*other_human.equipped.steel_sword);
+
+        ...
+        
+    }
+    return *this;
+}
+
      /// Operator=
-        /// Base 1
+        /// Hierarquia 1
              //Base
 
              //Derivadas da Base 1 - mostrar uso static_cast
 
-        /// Base 2
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+        /// Hierarquia 2
              //Base
 
              //Derivadas da Base 2 - mostrar uso static_cast
 
-        /// Base 3
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+
+        /// Hierarquia 3
              //Base
 
              //Derivadas da Base 3 - mostrar uso static_cast
+
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
 
 
      //// Operators== e !=
-         // Base 1
+         // Hierarquia 1
              //Base
 
              //Derivadas da Base 1 - mostrar uso static_cast
 
-         //// Base 2
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+
+         //// Hierarquia 2
              //Base
 
              //Derivadas da Base 2 - mostrar uso static_cast
 
-        //// Base 3
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+
+        //// Hierarquia 3
              //Base
 
              //Derivadas da Base 3 - mostrar uso static_cast
 
+             //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+
      //// Operator<<
-        //// Base 1
-            //Base
+        //// Hierarquia 1
+             //Base
 
-            //Derivadas da Base 1 - mostrar uso static_cast
+             //Derivadas da Base 1 - mostrar uso static_cast
 
-        //// Base 2
-            //Base
+              //Derivadas da Derivada - mostrar uso static_cast
 
-            //Derivadas da Base 2 - mostrar uso static_cast
+             //e assim por diante
 
-       //// Base 3
 
-            ////Derivadas da Base 3 - mostrar uso static_cast
+        //// Hierarquia 2
+             //Base
+
+             //Derivadas da Base 2 - mostrar uso static_cast
+
+              //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+
+       //// Hierarquia 3
+
+             //Base
+
+             //Derivadas da Base 3 - mostrar uso static_cast
+
+              //Derivadas da Derivada - mostrar uso static_cast
+
+             //e assim por diante
+
+            
 
 //// Carregamento e salvamento de arquivos
     /*É necessário ter a funcionalidade: 1. 
-      leitura de arquivos para configuração das suas classes e variáveis de status, 2. 
-      processamento das variáveis de status e 3. salvamento dessas variáveis. 
-      Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avaliado.*/
+      leitura de arquivos para configuração das suas classes e variáveis de status, 
+      2. processamento das variáveis de status e 
+      3. salvamento dessas variáveis. 
+      
+///Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avaliado.*/
 
     //Link arquivo de configuração no repositório
 
