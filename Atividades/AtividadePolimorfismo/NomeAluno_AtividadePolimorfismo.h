@@ -3,7 +3,7 @@ Expandir a hierarquia da atividade anterior: três hierarquias de três níveis.
     Sendo que em uma das hierarquias há dois níveis de classes 
     abstratas. Uma das classes abstratas precisa ter pelo menos dois métodos virtuais 
     puros. 
-    
+
     Para cada lado da hierarquia criar ao menos duas classes concretas. 
         Pelo menos duas classes concretas herdando de uma dessas outras classes 
         concretas. 
@@ -43,38 +43,40 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
 //// Cada classe, além dos métodos herdados, precisa ter pelo menos um método que tenha 
 //alguma funcionalidade, que não seja set e get.
 
-//// O .h das classes bases
+//// Os .h
 
-     //Classe abstract base 1    
+    /// O .h das classes bases
 
-     //Classe abstract base 2
+        //Classe abstract base 1    
 
-     //Classe abstract base 3
+        //Classe abstract base 2
 
-//// O .h da hierarquia 1 (abstract base 1)
+        //Classe abstract base 3
 
-     //Classe Abstract 1 que herda da base abstract
-        //Deve ter seu próprio método virtual puro
+    /// O .h da hierarquia 1 (abstract base 1)
 
-     //Classe 2 - concrete
+        //Classe Abstract 1 que herda da base abstract
+            //Deve ter seu próprio método virtual puro
 
-     //E assim por diante
+        //Classe 2 - concrete
 
-//// O .h da hierarquia 2 (abstract base 2)
+        //E assim por diante
 
-     //Classe 1 (abstract or concrete)
+    /// O .h da hierarquia 2 (abstract base 2)
 
-     //Classe 2
+        //Classe 1 (abstract or concrete)
 
-     //E assim por diante
+        //Classe 2
 
-//// O .h da hierarquia 3 (abstract base 3)
+        //E assim por diante
 
-     //Classe 1
+    /// O .h da hierarquia 3 (abstract base 3)
 
-     //Classe 2
+        //Classe 1
 
-     //E assim por diante
+        //Classe 2
+
+        //E assim por diante
 
 ////Implementação de constructores default de cópia
 
@@ -144,7 +146,7 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
 // onde ptr é um ponteiro de uma de
 //suas classes criadas que tem relação de composição.
 
-    /// Mostrar .h como este vector (com apenas ele presente) usando "..." para omitir
+    /// Mostrar .h com este vector (com apenas ele presente) usando "..." para omitir
     //o resto
 
     /// Mostrar inicialização do vector 
@@ -155,6 +157,8 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
     //preenchimento, set e get serão ignorados
 
     ///Mostrar destructor
+
+    /// Mostrar p uso (indireto) deste vector
 
 
 //// Ter um atributo static e um atributo const static.
@@ -168,6 +172,7 @@ Sem o diagrama e os dois videos, o trabalho não será avaliado.*/
 
 //// Fazer a sobrecarga para todas as classes dos operadores =, ==, ≠ e << (friend)
 
+//Class concrete
 const Human &Human::operator=(const Human &other_human) {
     if (this != &other_human) {
         // forma não permitida pela classe abstrata
@@ -182,7 +187,7 @@ const Human &Human::operator=(const Human &other_human) {
     return *this;
 }
 
-
+//Base abstract
 const Entity &Entity::operator=(const Entity &assigned_entity) {
     if (this != &assigned_entity) {
         this->name = assigned_entity.name;
