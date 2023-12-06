@@ -16,7 +16,8 @@ Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avali
         //>>>Comentário: Não segue algumas normas de código: operador << está em 
         //em uma posição incorreta
 
-    //>>>Comentário:
+    //>>>Comentário: Não tem nada de static_cast. Não tem métodos que especializam
+    //a classe
 
 //// O .h das classes bases
 
