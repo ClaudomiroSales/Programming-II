@@ -191,6 +191,8 @@ class ObjetivoSecreto : public Carta
 
      ///E assim por diante
 
+//>>>Comentário: Não feito
+
 //// Mostrar implementação de método que especializa a derivada
  /// Mostrar reaproveitamente de código da base
 
