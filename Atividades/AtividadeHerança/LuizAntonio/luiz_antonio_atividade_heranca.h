@@ -9,7 +9,8 @@ Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avali
 
 
 //// Geral - parte para revisão
-    //Diagrama UML
+    //Diagrama UML - //>>>Comentário: faltou o outro lado de spells mas vou considerar
+    // pelo trabalho está bem elaborado
     //Organização do código 
 
 //// O .h das classes bases
@@ -160,6 +161,8 @@ private:
 
 
      ////Classe base 3
+
+//>>>Comentário: não retornar maps, a não ser por const ref
 
 class Spell {
 public:
@@ -387,6 +390,7 @@ private:
 
 
      ////Classe 2
+     //>>>Comentário:  Por que Weapon não tem o operator <<
 
 class Weapon : public Item {
 public:
