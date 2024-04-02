@@ -1,194 +1,55 @@
-/*Criar três hierarquia, sendo duas de três níveis, como explicado em sala e 
-no Classroom. Fazer a sobrecarga para cada classe dos operadores =, ==, ≠, ! e << 
-(friend). Usar sempre que possível o static_cast para reaproveitamento de código. 
-Para cada classe do seu projeto criar pelo menos três constructores, 
-sendo um o constructor de cópia. É necessário ter a funcionalidade: 1. 
-leitura de arquivos para configuração das suas classes e variáveis de status, 2. 
-processamento das variáveis de status e 3. salvamento dessas variáveis. 
-Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avaliado.*/
+/*Na classe atual implementar ter pelo menos três constructores, sendo dois deles o 
+constructor vazio e o constructor de cópia. A classe deve ter pelo menos 
+dois atributos não-const, sendo um deles uma string, e um ATRIBUTO const. 
+Criar para cada atributo os métodos set e get. A classe deve ter dois métodos 
+que não sejam set e get, um que seja const e outro não const. 
+No main mostrar o uso da classe com objetos CONST e não-const da sua classe. 
+Todo set que recebe uma string deve limitar o tamanho da string usando o método substr.
+Para fazer o diagrama usar o https://www.planttext.com/. 
+Não colocar sets e gets no diagrama UML.
+Sem o diagrama UML e vídeo o trabalho não será avaliado.*/
 
+//// Três constructores, sendo dois deles o constructor vazio e o constructor de cópia.
 
-//// Geral - parte para revisão
-    //Diagrama UML    
-    //Organização do código 
+     //No .h da classe
 
-//// O .h das classes bases
+     //Implementação no cpp da classe
 
-     ////Classe base 1    
+     //Uso no main dos três constructores
 
-     ////Classe base 2
+//// Dois atributos não-const, sendo um deles uma string, e um ATRIBUTO const.
 
-     ////Classe base 3
+     //No .h da classe
 
-//// O .h da hierarquia 1
+     //Inicialização nos contructores
 
-     ////Classe 1
+     //Uso nos métodos
 
-     ////Classe 2
+//// Criar para cada atributo os métodos set e get
 
-     ///E assim por diante
+     /*Todo set que recebe uma string deve limitar o tamanho da 
+     string usando o método substr.*/
 
-//// O .h da hierarquia 2
+     //No .h da classe
 
-     ////Classe 1
+     //Implementação no cpp da classe
 
-     ////Classe 2
+     //Uso dos sets e gets no main
 
-     ///E assim por diante
 
-//// O .h da hierarquia 3
+//// A classe deve ter dois métodos, um que seja const e outro não const.
 
-     ////Classe 1
+     //Método const no .h da classe
 
-     ////Classe 2
+     //Implementação do método const no .cpp
 
-     ///E assim por diante
+     //Uso do método const no main
+     
+     //Método não-const no .h da classe
 
+     //Implementação do método não-const no .cpp
 
-//// Mostrar implementação de método que especializa a derivada
- /// Mostrar reaproveitamente de código da base
+     //Uso do método não-const no main
 
-    //// Hierarquia 1
+//// No main mostrar o uso da classe com objetos CONST e não-const da sua classe
 
-         ////Classe 1
-
-         ////Classe 2
-
-         ///E assim por diante
-
-    //// Hierarquia 2
-
-         ////Classe 1
-
-         ////Classe 2
-
-         ///E assim por diante
-
-
-    //// Hierarquia 3
-
-         ////Classe 1
-
-         ////Classe 2
-
-         ///E assim por diante
-
-
-
-//// Fazer a sobrecarga para todas as classes dos operadores =, ==, ≠ e << (friend)
-
-     //// Operator=
-         //// Base 1
-
-             ////Derivadas da Base 1 - mostrar uso static_cast
-
-         //// Base 2
-
-             ////Derivadas da Base 2 - mostrar uso static_cast
-
-        //// Base 3
-
-             ////Derivadas da Base 3 - mostrar uso static_cast
-
-
-     //// Operators== e !=
-         //// Base 1
-
-             ////Derivadas da Base 1 - mostrar uso static_cast
-
-         //// Base 2
-
-             ////Derivadas da Base 2 - mostrar uso static_cast
-
-        //// Base 3
-
-             ////Derivadas da Base 3 - mostrar uso static_cast
-
-     //// Operator<<
-        //// Base 1
-
-            ////Derivadas da Base 1 - mostrar uso static_cast
-
-        //// Base 2
-
-            ////Derivadas da Base 2 - mostrar uso static_cast
-
-       //// Base 3
-
-            ////Derivadas da Base 3 - mostrar uso static_cast
-
-
-//// Para cada classe do seu projeto criar pelo menos dois constructores, 
- //sendo um o constructor de cópia 
- ////Mostrar uso de reaproveitamento de código da base na derivada
-
-    //// Base 1 - constructores
-        ////Constructor 1
-
-        ////Constructor de cópia
-
-    //// Base 2 - constructores
-        ////Constructor 1
-
-        ////Constructor de cópia
-
-    //// Base 3 - constructores
-        ////Constructor 1
-
-        ////Constructor de cópia 
-
-    ////Derivadas - constructores
-
-        //// Hierarquia 1
-
-             ////Classe 1
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-
-             ////Classe 2
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-             
-             ///E assim por diante
-
-
-        //// Hierarquia 2
-
-             ////Classe 1
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-
-             ////Classe 2
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-
-             ///E assim por diante
-
-
-      //// Hierarquia 2
-
-             ////Classe 1
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-
-             ////Classe 2
-                 ////Constructor 1
-
-                 ////Constructor de cópia
-
-             ///E assim por diante
-
-//// Carregamento e salvamento de arquivos
-    /*É necessário ter a funcionalidade: 1. 
-      leitura de arquivos para configuração das suas classes e variáveis de status, 2. 
-      processamento das variáveis de status e 3. salvamento dessas variáveis. 
-      Sem o diagrama UML, a saída do programa e o vídeo, o trabalho não será avaliado.*/
-
-    //Link arquivo de configuração no repositório
-
-    //Link vídeo mostrando a execução do código usando o arquivo de configuração
