@@ -1,12 +1,22 @@
-/*Na classe atual implementar ter pelo menos três constructores, sendo dois deles o 
-constructor vazio e o constructor de cópia. A classe deve ter pelo menos 
-dois atributos não-const, sendo um deles uma string, e um ATRIBUTO const. 
-Criar para cada atributo os métodos set e get. A classe deve ter dois métodos 
-que não sejam set e get, um que seja const e outro não const. 
-No main mostrar o uso da classe com objetos CONST e não-const da sua classe. 
-Todo set que recebe uma string deve limitar o tamanho da string usando o método substr.
-Para fazer o diagrama usar o https://www.planttext.com/. 
-Não colocar sets e gets no diagrama UML.
+/*Criar uma segunda classe. Todas as classes devem ter sempre dois contructores, 
+sendo um de cópia, um atributo e um método que não  seja set ou get. 
+
+Criar dois atributos static que não sejam arrays e nem const. 
+Eles devem ser instanciados e usados efetivamente nas classes. 
+
+Criar um atributo const static e mostrar o uso dentro da classe. 
+
+Criar dois métodos static e mostrar o uso no main. 
+
+Ter pelo menos um método inline nas suas classes. 
+
+Criar dois arrays dentro da classe, sendo um deles um const static. 
+Mostrar o uso desses arrays na classe - não apenas inicialização e preenchimento. 
+
+Usar pelo menos dois loops, um for e um while, na sua classe. 
+
+Todo set que recebe uma string deve limitar o tamanho da string usando o método substr. Para fazer o diagrama usar o https://www.planttext.com/.
+Não colocar sets e gets no diagrama UML (mas precisam estar no código no repositório). 
 Sem o diagrama UML e vídeo o trabalho não será avaliado.*/
 
 //// Três constructores, sendo dois deles o constructor vazio e o constructor de cópia.
