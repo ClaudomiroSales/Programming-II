@@ -15,7 +15,8 @@ Mostrar o uso desses arrays na classe - não apenas inicialização e preenchime
 
 Usar pelo menos dois loops, um for e um while, na sua classe. 
 
-Todo set que recebe uma string deve limitar o tamanho da string usando o método substr. Para fazer o diagrama usar o https://www.planttext.com/.
+Todo set que recebe uma string deve limitar o tamanho da string usando o método substr.
+Para fazer o diagrama usar o https://www.planttext.com/.
 Não colocar sets e gets no diagrama UML (mas precisam estar no código no repositório). 
 Sem o diagrama UML e vídeo o trabalho não será avaliado.*/
 
